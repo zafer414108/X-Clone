@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+#auth-page {
+  min-height: 100vh;
+  background: rgb(30, 30, 30);
+  display: grid;
+  place-items: center;
+}
+
+#auth-page form {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+  padding: 60px 80px;
+  border: 1px solid rgb(69, 69, 69);
+  border-radius: 10px;
+  gap: 50px;
+}
+@media (max-width: 650px) {
+  #auth-page form {
+    min-width: unset;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+  }
+}
+#auth-page form img {
+  width: 80px;
+  height: 80px;
+}
+#auth-page form div {
+  width: 100%;
+}
+#auth-page form input {
+  margin-top: 5px;
+}
+#auth-page form button {
+  width: 100%;
+  font-weight: 600;
+  border-radius: 10px;
+}
+#auth-page form button:hover {
+  background: rgb(134, 134, 134);
+}
+#auth-page form .warning {
+  width: 100%;
+  background: #f8d7da;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: black;
+}
+
+aside {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+}
+@media (max-width: 1000px) {
+  aside {
+    display: none;
+  }
+}
+
+aside form {
+  background: rgb(40, 40, 40);
+  padding: 5px 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 40px;
+  color: gray;
+}
+aside form input {
+  background: none;
+  border: none;
+  outline: none;
+  color: gray;
+}
+
+.user-page .page-top {
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+.user-page .top {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-page .top h3 {
+  font-size: 18px;
+  line-height: 14px;
+  margin-bottom: 2px;
+}
+.user-page .top span {
+  font-size: 15px;
+  color: gray;
+}
+.user-page .banner {
+  position: relative;
+}
+.user-page .banner img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user-page .banner .user-pp {
+  position: absolute;
+  bottom: -50px;
+  left: 30px;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+@media (max-width: 1000px) {
+  .user-page .banner .user-pp {
+    bottom: -40px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+.user-page .buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 20px;
+  gap: 10px;
+}
+.user-page .buttons .icon {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.user-page .buttons .icon:hover {
+  background: rgba(128, 128, 128, 0.352);
+}
+.user-page .buttons button {
+  border-radius: 90px;
+}
+.user-page .buttons button:hover {
+  background: rgba(226, 226, 226, 0.863);
+}
+.user-page .info {
+  padding: 20px;
+}
+.user-page .info h4 {
+  font-size: 19px;
+  line-height: 17px;
+}
+.user-page .info .profile {
+  color: gray;
+  font-size: 14px;
+}
+.user-page .info p {
+  font-size: 15px;
+}
+.user-page .info div {
+  display: flex;
+  gap: 10px;
+}
+.user-page .info div a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+.user-page .info div a span {
+  font-weight: bold;
+  color: white;
+}
+.user-page .info div a span:nth-child(2) {
+  color: gray;
+  font-weight: normal;
+}
+
+.radio-input input {
+  display: none;
+}
+
+.radio-input {
+  --container_width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: gray;
+  width: var(--container_width);
+  overflow: hidden;
+  border: 1px solid rgba(53, 52, 52, 0.226);
+}
+
+.radio-input label {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
+.selection {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--container_width) / 4);
+  z-index: 0;
+  text-align: center;
+  left: 0;
+  top: 0;
+  transition: 0.15s ease;
+}
+
+.radio-input label:has(input:checked) {
+  color: #fff;
+}
+
+.radio-input label:has(input:checked) {
+  border-bottom: 3px solid rgb(29, 155, 240);
+  color: white;
+  font-weight: 600;
+}
+
+#feed {
+  background: black;
+  color: white;
+  min-height: 100vh;
+  font-family: "poppins";
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr;
+}
+@media (max-width: 1000px) {
+  #feed {
+    grid-template-columns: 1fr 5fr 0 !important;
+  }
+}
+@media (min-width: 670px) and (max-width: 1000px) {
+  #feed {
+    grid-template-columns: 1fr 600px 1fr !important;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1300px) {
+  nav {
+    align-items: end;
+    margin-right: 50px;
+  }
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  color: white;
+}
+@media (max-width: 1300px) {
+  nav ul {
+    align-items: end;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    align-items: center;
+  }
+}
+nav ul a {
+  color: white;
+}
+nav ul li {
+  display: flex;
+  font-size: 19px;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+nav ul li:hover {
+  background: rgb(60, 60, 60);
+}
+nav ul #send {
+  background: #1da1f2;
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 15px 10px;
+}
+@media (max-width: 1300px) {
+  nav ul i {
+    font-size: 23px;
+  }
+}
+nav ul span {
+  white-space: nowrap;
+}
+@media (max-width: 1300px) {
+  nav ul span {
+    display: none;
+  }
+}
+nav img {
+  width: 80px;
+}
+@media (max-width: 1300px) {
+  nav img {
+    width: 50px;
+  }
+}
+nav .user-info {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 0 10px;
+}
+@media (max-width: 1300px) {
+  nav .user-info {
+    flex-direction: column;
+    align-items: end;
+  }
+}
+nav .user-info img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+@media (max-width: 1300px) {
+  nav .user-info img {
+    width: 50px;
+    height: 50px;
+  }
+}
+nav .user-info button {
+  font-size: 16px;
+  padding: 4px 10px;
+}
+@media (max-width: 1300px) {
+  nav .user-info button {
+    font-size: 18px;
+    padding: 6px 16px;
+  }
+}
+@media (max-width: 1300px) {
+  nav .user-info span,
+  nav .user-info p {
+    display: none;
+  }
+}
+
+main {
+  height: 100vh;
+  border: 1px solid rgb(60, 60, 60);
+  overflow: auto;
+}
+main::-webkit-scrollbar {
+  background: black;
+  width: 7px;
+}
+main::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 50px;
+}
+main header {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 21px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+main #post-tweet {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+main #post-tweet img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main #post-tweet .input-area {
+  width: 100%;
+}
+main #post-tweet .input-area input {
+  width: 100%;
+  background: black;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+main #post-tweet .input-area .button {
+  display: flex;
+  justify-content: end;
+}
+main #post-tweet .input-area .button button {
+  border-radius: 60px;
+  background: #1da1f2;
+  color: white;
+}
+main #post-tweet .input-area .button button:hover {
+  background: rgb(0, 92, 149);
+}
+
+.tweets-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav h4 {
+  font-size: 20px;
+}
+
+#back-btn {
+  font-size: 21px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+#back-btn:hover {
+  background: rgba(86, 86, 86, 0.794);
+}
+
+.detail-tweet {
+  padding: 20px;
+}
+
+.tweet {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+.tweet:hover {
+  background: rgb(28, 28, 28);
+}
+.tweet #user-img {
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 700px) {
+  .tweet #user-img {
+    display: none;
+  }
+}
+.tweet .mobile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+@media (min-width: 700px) {
+  .tweet .mobile-img {
+    display: none;
+  }
+}
+.tweet .body {
+  width: 100%;
+  margin-top: 10px;
+}
+.tweet .body .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tweet .body .user a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.tweet .body .user a p {
+  color: gray;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+@media (max-width: 1000px) {
+  .tweet .body .user a p {
+    font-size: 14px;
+  }
+}
+.tweet .body .content {
+  text-decoration: none;
+  color: #ffffff;
+}
+.tweet .body .content img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 300px;
+  border-radius: 10px;
+}
+.tweet .body .content video {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 500px;
+}
+.tweet .body button {
+  border-radius: 60px;
+  padding: 4px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.tweet .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: gray;
+}
+.tweet .info p {
+  margin: 0;
+}
+.tweet .info #count {
+  color: white;
+  font-weight: bold;
+}
+
+.tweet .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.tweet .buttons button {
+  background: none;
+  color: rgb(136, 136, 136);
+}
+@media (max-width: 1000px) {
+  .tweet .buttons button {
+    font-size: 14px;
+  }
+}
+.tweet .buttons button:nth-child(1):hover {
+  color: #1da1f2;
+  background: rgba(1, 201, 241, 0.239);
+}
+.tweet .buttons button:nth-child(2):hover {
+  color: green;
+  background: rgba(54, 148, 16, 0.239);
+}
+.tweet .buttons button:nth-child(3):hover {
+  color: rgb(228, 100, 121);
+  background: rgba(208, 13, 202, 0.239);
+}
+.tweet .buttons button:nth-child(4):hover {
+  color: #1da1f2;
+  background: rgba(1, 201, 241, 0.239);
+}/*# sourceMappingURL=style.css.map */

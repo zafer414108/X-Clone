@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>X | Ana Sayfa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/scss/style.css" />
+  </head>
+  <body id="feed">
+    <!-- sol kısım -->
+    <nav>
+      <ul>
+        <img src="/images/x-logo.png" />
+        <li>
+          <a href="/">
+            <i class="bi bi-house-fill"></i>
+            <span>Anasayfa</span>
+          </a>
+        </li>
+        <li>
+          <i class="bi bi-search"></i>
+          <span>Keşfet</span>
+        </li>
+        <li>
+          <i class="bi bi-bell-fill"></i>
+          <span>Bildirimler</span>
+        </li>
+        <li>
+          <i class="bi bi-bookmark-fill"></i>
+          <span>Yer İşaretleri</span>
+        </li>
+        <li>
+          <i class="bi bi-envelope-fill"></i>
+          <span>Mesajlar</span>
+        </li>
+        <li id="send">
+          <i class="bi bi-send-fill"></i>
+          <span>Gönder</span>
+        </li>
+      </ul>
+
+      <div class="user-info">
+        <img id="profile-pic" src="/images/defaultt.png" />
+
+        <div>
+          <p id="user-name"></p>
+          <p id="user-tag"></p>
+          <button id="logout-btn">
+            <i class="bi bi-door-open-fill"></i>
+            <span> Çıkış Yap </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- orta kısım -->
+    <main>
+      <header>Anasayfa</header>
+
+      <form id="post-tweet">
+        <img id="profile-pic" src="/images/defaultt.png" />
+        <div class="input-area">
+          <input placeholder="Neler Oluyor?" type="text" />
+          <div class="button">
+            <button>Tweetle</button>
+          </div>
+        </div>
+      </form>
+
+      <section class="tweets-area">
+        <!-- <div class="tweet">
+          <img id="user-img" src="/images/defaultt.png" />
+          <div class="body">
+            <div class="user">
+              <div>
+                <b>Deneme</b>
+                <p>@deneme</p>
+                <p>20 saat önce</p>
+              </div>
+              <i class="bi bi-three-dots"></i>
+            </div>
+            <div class="content">
+              <p>Atılan tweet'in yazı içerği</p>
+              <img
+                src="https://pbs.twimg.com/media/F7u8cXhWYAAC29B.jpg"
+              />
+            </div>
+            <div class="buttons">
+              <button>
+                <i class="bi bi-chat"></i>
+                <span>35</span>
+              </button>
+              <button>
+                <i class="bi bi-recycle"></i>
+                <span>35</span>
+              </button>
+              <button>
+                <i class="bi bi-heart"></i>
+                <span>35</span>
+              </button>
+              <button>
+                <i class="bi bi-bookmark"></i>
+                <span>35</span>
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+    <!-- sağ kısım -->
+    <aside>
+      <form>
+        <i class="bi bi-search"></i>
+        <input placeholder="ara" type="text" />
+      </form>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/tr.min.js"></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

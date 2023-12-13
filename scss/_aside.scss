@@ -1,0 +1,27 @@
+// sağ > yan içerik
+aside {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+aside form {
+  background: rgb(40, 40, 40);
+  padding: 5px 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 40px;
+  color: gray;
+  input {
+    background: none;
+    border: none;
+    outline: none;
+    color: gray;
+  }
+}
